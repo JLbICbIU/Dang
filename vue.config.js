@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/Dang/',
+  publicPath: '/Dang!/',
   assetsDir: './'
 }
