@@ -44,14 +44,14 @@ export default {
           title: "КОНЕЦ ИГРЫ",
           to: "/gameover"
         },
-        {
-          title: "КАРТЫ",
-          to: "/cards"
-        },
-        {
-          title: "СПОСОБНОСТИ",
-          to: "/abilities"
-        },
+        // {
+        //   title: "КАРТЫ",
+        //   to: "/cards"
+        // },
+        // {
+        //   title: "СПОСОБНОСТИ",
+        //   to: "/abilities"
+        // },
         {
           title: "ВАЖНЫЕ ПРАВИЛА",
           to: "/important-rules"
@@ -78,6 +78,11 @@ html, body {
   src: url('./assets/fonts/Trattatello.ttf');
 }
 
+@font-face {
+  font-family: MyGothic;
+  src: url('./assets/fonts/CenturyGothicRegular.ttf');
+}
+
 body {
   background-image: url('./assets/img/circle.png');
   background-repeat: no-repeat;
@@ -99,7 +104,7 @@ main {
 
 
 #app {
-  font-family: Century Gothic;
+  font-family: MyGothic;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
