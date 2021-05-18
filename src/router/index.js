@@ -10,11 +10,53 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    component: () => import('../views/About.vue')
+  },
+  {
+    path: '/abilities',
+    name: 'Abilities',
+    component: () => import('../views/Abilities.vue')
+  },
+  {
+    path: '/burgers',
+    name: 'Burgers',
+    component: () => import('../views/Burgers.vue')
+  },
+  {
+    path: '/cards',
+    name: 'Cards',
+    component: () => import('../views/Cards.vue')
+  },
+  {
+    path: '/composition',
+    name: 'Composition',
+    component: () => import('../views/Composition.vue')
+  },
+  {
+    path: '/gameplay',
+    name: 'Gameplay',
+    component: () => import('../views/Gameplay.vue')
+  },
+  {
+    path: '/gameover',
+    name: 'Gameover',
+    component: () => import('../views/Gameover.vue')
+  },
+  {
+    path: '/important-rules',
+    name: 'ImportantRules',
+    component: () => import('../views/ImportantRules.vue')
+  },
+  {
+    path: '/preparations',
+    name: 'Preparations',
+    component: () => import('../views/Preparations.vue')
+  },
+  {
+    path: '/target',
+    name: 'Target',
+    component: () => import('../views/Target.vue')
+  },
 ]
 
 const router = createRouter({

@@ -2,7 +2,7 @@
 <main>
   <slider-navigation :data="sliderData"/>
 
-  <router-view/>
+  <router-view class="article"/>
 </main>
 </template>
 
@@ -41,6 +41,10 @@ export default {
           to: "/gameplay"
         },
         {
+          title: "КОНЕЦ ИГРЫ",
+          to: "/gameover"
+        },
+        {
           title: "КАРТЫ",
           to: "/cards"
         },
@@ -75,7 +79,7 @@ html, body {
 }
 
 body {
-  background-image: url('./assets/img/background.png');
+  background-image: url('./assets/img/circle.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
@@ -100,5 +104,17 @@ main {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
+}
+
+.article {
+  margin-top: 50px;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
 }
 </style>
