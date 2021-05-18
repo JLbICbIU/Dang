@@ -104,6 +104,8 @@ main {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: white;
+
+  padding: 0 10px;
 }
 
 .article {
