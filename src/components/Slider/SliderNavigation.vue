@@ -5,7 +5,6 @@
         <card-button 
           :title="item.title"
           :to="item.to"
-          :backgroundColor="item.backgroundColor"
         />
       </splide-slide>
     </splide>

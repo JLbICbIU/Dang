@@ -17,21 +17,44 @@ export default {
     return {
       sliderData: [
         {
-          title: "Главная",
+          title: "ДЭНГ!",
           to: "/"
         },
         {
-          title: "О нас",
-          to: "/about",
-          backgroundColor: "red"
+          title: "СОСТАВ ИГРЫ",
+          to: "/composition"
         },
         {
-          title: "Другие",
-          to: "/"
+          title: "ЦЕЛЬ ИГРЫ",
+          to: "/target"
         },
         {
-          title: "Другие",
-          to: "/"
+          title: "ПОДГОТОВКА К ИГРЕ",
+          to: "/preparations"
+        },
+        {
+          title: "БУРГЕРЫ",
+          to: "/burgers"
+        },
+        {
+          title: "ХОД ИГРЫ",
+          to: "/gameplay"
+        },
+        {
+          title: "КАРТЫ",
+          to: "/cards"
+        },
+        {
+          title: "СПОСОБНОСТИ",
+          to: "/abilities"
+        },
+        {
+          title: "ВАЖНЫЕ ПРАВИЛА",
+          to: "/important-rules"
+        },
+        {
+          title: "СОЗДАТЕЛИ",
+          to: "/about"
         },
       ]
     }
@@ -55,8 +78,9 @@ body {
   background-image: url('./assets/img/background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: top;
+  background-color: #100332;
   width: 100%;
   height: 100%;
   font-family: Trattatello;

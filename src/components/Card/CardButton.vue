@@ -1,9 +1,14 @@
 <template>
-  <div class="card" :style="backgroundUrl">
+  <div class="card" :style="[isActive ? activeBackgroundUrl : backgroundUrl]">
     <h1>{{title}}</h1>
-    <router-link :to="to">
-      <p>Перейти</p>
-    </router-link>
+      <router-link :to="to">
+        <div class="link-button" v-if="!isActive">
+          Смотреть
+        </div>
+        <div class="link-button" v-else>
+          Текущая
+        </div>
+      </router-link>
   </div>
 </template>
 
@@ -14,11 +19,6 @@ export default {
       type: String,
       required: false,
       default: "/",
-    },
-    backgroundColor: {
-      type: String,
-      required: false,
-      default: 'blue'
     },
     title: {
       type: String,
@@ -35,15 +35,24 @@ export default {
   },
   computed: {
     backgroundUrl() {
-      return 'background-image: url(\'' + this.background[this.backgroundColor] + '\')'
+      return 'background-image: url(\'' + this.background.blue + '\')'
+    },
+    activeBackgroundUrl() {
+      return 'background-image: url(\'' + this.background.red + '\')'
+    },
+
+    isActive() {
+      return this.$route.matched.some(({ path }) => path === this.to)
     }
   }
 };
 </script>
 
 <style scoped>
-.card {
+.card { 
   display: block;
+
+
   width: 250px;
   height: 350px;
   margin: auto;
@@ -54,13 +63,41 @@ export default {
   border-radius: 25px;
 }
 
-.card-image {
-  width: 250px;
-}
-
 h1 {
+  padding: 35px 5px;
+
   font-family: Trattatello;
   font-weight: bolder;
-  font-size: 40px;
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.link-button {
+  position: absolute;
+
+  bottom: 100px;
+  left: 50%;
+  right: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 120px;
+  height: 50px;
+  margin: auto;
+
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+
+  border-radius: 10px;
+  border: 2px solid rgb(0,0,0);
+
+  color: white;
+
+  font-size: 18px;
 }
 </style>
