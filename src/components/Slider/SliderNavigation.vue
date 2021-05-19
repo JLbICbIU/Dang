@@ -1,8 +1,10 @@
 <template>
   <nav>
     <splide :options="sliderOptions">
-      <splide-slide v-for="item in data" :key="item.title">
+      <splide-slide 
+        v-for="item in data" :key="item.title">
         <card-button 
+          @click="redirectTo(item.to)"
           :title="item.title"
           :to="item.to"
         />
@@ -37,6 +39,12 @@ export default {
         arrows: false,
         lazyload: 'nearby'
       }
+    }
+  },
+  methods: {
+    redirectTo(to) {
+      console.log(to)
+      this.$router.push({path: to})
     }
   }
 };

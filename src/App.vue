@@ -44,10 +44,10 @@ export default {
           title: "КОНЕЦ ИГРЫ",
           to: "/gameover"
         },
-        // {
-        //   title: "КАРТЫ",
-        //   to: "/cards"
-        // },
+        {
+          title: "КАРТЫ",
+          to: "/cards"
+        },
         // {
         //   title: "СПОСОБНОСТИ",
         //   to: "/abilities"
